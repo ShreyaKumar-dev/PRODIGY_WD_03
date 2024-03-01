@@ -8,14 +8,15 @@
 </head>
 <body>
     <div class="gameCntainer">
-        <nav>
-            <ul>
-                <li>MyTicTacToe</li>
-                <li>Home</li>
-            </ul>
-        </nav>
-        <div class="head"></div> <!-- Heading, Turn status -->
-        <div class="conatiner"></div> <!-- 3x3 grid -->
+        <div class="head"> <!-- Heading, Turn status --> <!--back button-->
+            <button type="button">Back</button>
+            <div class="arrange">
+                <h1>You vs Your Friend</h1>
+                <h2>Turn: <span id="turn">X</span></h2>
+            </div>
+        </div> 
+
+        <div class="board"></div> <!-- 3x3 grid -->
         <div class="status"></div> <!-- Game status: who won the game -->
         <div class="reset"></div> <!-- Reset/ Play again button -->
     </div>
