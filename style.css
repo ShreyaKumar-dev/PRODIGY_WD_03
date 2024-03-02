@@ -3,31 +3,47 @@
     padding: 0;
 }
 
+body{
+    /* font-family: "Actor", sans-serif;
+    background-color: white; */
+    width: 100%;
+    height: 100% !important;
+}
+
 .gameContainer{
     /* background: red; */
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .head{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+    font-family: "Actor", sans-serif;
+}
+
+.head .info{
+    font-size: 25px;
+    margin-top: 20px;
 }
 
 .board{
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(3, 10vw);
-    grid-template-rows: repeat(3, 10vw);
-    margin-bottom: 80px;
+    grid-template-columns: repeat(3, 8vw);
+    grid-template-rows: repeat(3, 8vw);
+    margin-bottom: 60px;
+    font-family: "Actor", sans-serif;
+    /* font-weight: 400; */
 }
 
 .box{
     border: 1px solid black;
-    font-size: 8vw;
+    font-size: 7vw;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -35,7 +51,7 @@
 }
 
 .box:hover{
-    background-color: rgb(221, 190, 251);
+    background-color: rgb(247, 238, 255);
 }
 
 .br-0{
@@ -54,12 +70,17 @@
     border-bottom: 0;
 }
 
-.reset{
+.status{
+    background: red;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    font-family: "Actor", sans-serif;
+    font-size: 25px;
+    /* margin-bottom: 30px; */
 }
 
-.reset button{
+.reset{
     font-size: 18px;
     padding: 10px 20px;
     border: 1px solid black;
@@ -67,8 +88,13 @@
     border-radius: 5px;
     cursor: pointer;
     color: black;
+    font-family: "Actor", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 150px;
 }
 
-.reset button:hover{
-    background-color: rgb(221, 190, 251);
+.reset:hover{
+    background-color: rgb(247, 238, 255);
+    border: 1px solid black;
 }

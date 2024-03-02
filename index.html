@@ -5,31 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="gameContainer">
         <div class="head"> <!--Heading, Turn status back button-->
             <h1>You vs Your Friend</h1>
-            <!-- <h2>Turn: <span id="turn">X</span></h2> -->
+            <span class="info">Turn for X</span>
         </div>
 
         <div class="board"> <!-- 3x3 grid -->
-            <div class="box bt-0 bl-0"><span class="box_text">X</span></div>
-            <div class="box bt-0"><span class="box_text">X</span></div>
-            <div class="box bt-0 br-0"><span class="box_text">X</span></div>
-            <div class="box bl-0"><span class="box_text">X</span></div>
-            <div class="box"><span class="box_text">X</span></div>
-            <div class="box br-0"><span class="box_text">X</span></div>
-            <div class="box bl-0 bb-0"><span class="box_text">X</span></div>
-            <div class="box bb-0"><span class="box_text">X</span></div>
-            <div class="box bb-0 br-0"><span class="box_text">X</span></div>
+            <div class="box bt-0 bl-0"><span class="box_text"></span></div>
+            <div class="box bt-0"><span class="box_text"></span></div>
+            <div class="box bt-0 br-0"><span class="box_text"></span></div>
+            <div class="box bl-0"><span class="box_text"></span></div>
+            <div class="box"><span class="box_text"></span></div>
+            <div class="box br-0"><span class="box_text"></span></div>
+            <div class="box bl-0 bb-0"><span class="box_text"></span></div>
+            <div class="box bb-0"><span class="box_text"></span></div>
+            <div class="box bb-0 br-0"><span class="box_text"></span></div>
         </div> 
 
-        <div class="status"></div> <!-- Game status: who won the game -->
-        
-        <div class="reset"> <!-- Reset/ Play again button -->
-            <button type="button">Play again</button>
+        <div class="status"> <!-- Game status: who won the game -->
+            <h2 class="game_won">X won</h2>
+            <button type="button" class="reset">Play again</button>
         </div>
+        
+        <div class="play_again"> <!-- Reset/ Play again button -->
+            
+        </div>
+        
     </div>
     <!-- <button type="button">Back</button> -->
 
