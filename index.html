@@ -14,7 +14,12 @@
     <div class="gameContainer">
         <div class="head"> <!--Heading, Turn status back button-->
             <h1>You vs Your Friend</h1>
-            <span class="info">Turn for X</span>
+            <div class="turn_container">
+                <span class="info">Turn for</span>
+                <div class="turn_box">X</div>
+                <div class="turn_box">O</div>
+                <div class="bg"></div>
+            </div>
         </div>
 
         <div class="board"> <!-- 3x3 grid -->
@@ -30,7 +35,7 @@
         </div> 
 
         <div class="status"> <!-- Game status: who won the game -->
-            <h2 class="game_won">X won</h2>
+            <p class="game_won">X won</p>
             <button class="reset">Play again</button>
         </div>
     </div>

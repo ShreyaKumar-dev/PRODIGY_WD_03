@@ -1,17 +1,20 @@
 *{
     margin: 0;
     padding: 0;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 body{
-    /* font-family: "Actor", sans-serif;
-    background-color: white; */
+    /* font-family: "Actor", sans-serif; */
+    background-color: #252a34;
     width: 100%;
     height: 100% !important;
+    transition: 0.2s ease-in-out;
+    color: white;
 }
 
 .gameContainer{
-    /* background: red; */
     display: flex;
     flex-direction: column;
     margin-top: 60px;
@@ -22,13 +25,54 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-bottom: 60px;
     font-family: "Actor", sans-serif;
 }
 
-.head .info{
+.head h1{
+    /* font-size: 40px; */
+    margin-bottom: 20px;
+}
+
+.turn_container{
+    width: 170px;
+    height: 80px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+
+.turn_container .info{
+    grid-column-start: 1;
+    grid-column-end: 3;
     font-size: 25px;
-    margin-top: 20px;
+    margin: 0;
+}
+
+.turn_container .turn_box{
+    border: 3px solid black;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.turn_container .turn_box:nth-child(even){
+    /* background-color: rgb(247, 238, 255); */
+    border-right: none;
+}
+
+.bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color: #FF2E63;
+    z-index: -1;
 }
 
 .board{
@@ -38,11 +82,10 @@ body{
     grid-template-rows: repeat(3, 8vw);
     margin-bottom: 60px;
     font-family: "Actor", sans-serif;
-    /* font-weight: 400; */
 }
 
 .box{
-    border: 1px solid black;
+    border: 1px solid white;
     font-size: 7vw;
     cursor: pointer;
     display: flex;
@@ -86,17 +129,41 @@ body{
 .reset{
     font-size: 18px;
     padding: 10px 20px;
-    border: 1px solid black;
+    border: 1px solid white;
     background: transparent;
     border-radius: 5px;
     cursor: pointer;
-    color: black;
     font-family: "Actor", sans-serif;
-    font-weight: 400;
     text-transform: uppercase;
+    color: white;
 }
 
 .reset:hover{
-    background-color: rgb(247, 238, 255);
-    border: 1px solid black;
+    background-color: #FF2E63;
+    border: none;
+
+}
+
+@media screen and ((min-width: 450px) and (max-width: 800px))
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+
+    .board{
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+    }
+}
+
+@media screen and (max-width: 450px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+
+    .board{
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
 }

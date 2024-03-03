@@ -31,6 +31,22 @@ const checkWin = () => {
     })
 }
 
+// Function to check for a draw
+const checkDraw = () => {
+    let boxTexts = document.querySelectorAll('.box_text');
+    let draw = true;
+    boxTexts.forEach(box => {
+        if (box.innerText === '') {
+            draw = false;
+        }
+    });
+    if (draw && !gameover) {
+        document.querySelector('.game_won').innerText = "It's a Draw!";
+        gameover = true;
+    }
+}
+
+
 // Game Logic
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element => {
@@ -40,6 +56,7 @@ Array.from(boxes).forEach(element => {
             boxText.innerText = turn;
             turn = changeTurn();
             checkWin();
+            checkDraw();
             if (!gameover){
                 document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
             }
