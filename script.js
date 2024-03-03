@@ -23,10 +23,14 @@ const checkWin = () => {
     wins.forEach(e => {
         if((boxText[e[0]].innerText === boxText[e[1]].innerText) && (boxText[e[1]].innerText === boxText[e[2]].innerText) && (boxText[e[0]].innerText !== "")){
             document.querySelector('.game_won').innerText = boxText[e[0]].innerText + " Won"
+            document.querySelector('.reset').style.display = "inline"
             gameover = true;
             // document.querySelector('.line').style.width = "25vw"
             // document.querySelector('.line').style.transform = `translate(${e[0]%3*25}vw, ${Math.floor(e[0]/3)*25}vw) rotate(${e[0]%2*45}deg)`
-            // document.querySelector('.line').style.display = "block"
+            for(let i=0; i<3; i++){
+                document.querySelector('.line').style.width = "25vw"
+                document.querySelector('.line').style.transform = `translate(${e[i]%3*25}vw, ${Math.floor(e[i]/3)*25}vw) rotate(${e[i]%2*45}deg)`
+            }
         }
     })
 }
