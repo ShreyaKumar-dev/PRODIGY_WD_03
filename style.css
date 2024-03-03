@@ -71,13 +71,16 @@ body{
 }
 
 .status{
-    background: red;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.game_won{
     font-family: "Actor", sans-serif;
     font-size: 25px;
-    /* margin-bottom: 30px; */
+    margin-bottom: 30px;
 }
 
 .reset{
@@ -91,7 +94,6 @@ body{
     font-family: "Actor", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    width: 150px;
 }
 
 .reset:hover{

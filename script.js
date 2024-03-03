@@ -48,9 +48,14 @@ Array.from(boxes).forEach(element => {
 })
 
 // Reset the game
-reset.addEventListener('click', () => {
+let resetButton = document.querySelector('.reset');
+resetButton.addEventListener('click', () => {
     let boxTexts = document.querySelectorAll('.box_text');
     Array.from(boxTexts).forEach(element => {
-        element.innerText = ""
-    })
-})
+        element.innerText = "";
+    });
+    document.querySelector('.game_won').innerText = "";
+    document.getElementsByClassName("info")[0].innerText = "Turn for X";
+    gameover = false;
+});
+
